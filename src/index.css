@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --theme-bg: #f8fafc;
+    --theme-bg-subtle: #f1f5f9;
+    --theme-card: #ffffff;
+    --theme-card-subtle: #f8fafc;
+    --theme-border: #e2e8f0;
+    --theme-border-strong: #cbd5e1;
+    --theme-text-primary: #0f172a;
+    --theme-text-secondary: #475569;
+    --theme-text-muted: #64748b;
+    --theme-primary: #2563eb;
+    --theme-primary-hover: #1d4ed8;
+    --theme-primary-subtle: #eff6ff;
+    --theme-primary-text: #1e40af;
+    --theme-header-bg: rgba(255, 255, 255, 0.95);
+    --theme-banner-from: #1e3a8a;
+    --theme-banner-via: #1e1b4b;
+    --theme-banner-to: #0f172a;
+    --theme-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  }
+
+  /* 2. Midnight Diagnostic (Ophthalmic Darkroom OLED) */
+  [data-theme="midnight"], .dark[data-theme="midnight"] {
+    --theme-bg: #070a12;
+    --theme-bg-subtle: #0d121f;
+    --theme-card: #111827;
+    --theme-card-subtle: #162033;
+    --theme-border: #1f293d;
+    --theme-border-strong: #334155;
+    --theme-text-primary: #f8fafc;
+    --theme-text-secondary: #cbd5e1;
+    --theme-text-muted: #94a3b8;
+    --theme-primary: #38bdf8;
+    --theme-primary-hover: #0ea5e9;
+    --theme-primary-subtle: #082f49;
+    --theme-primary-text: #7dd3fc;
+    --theme-header-bg: rgba(11, 15, 26, 0.95);
+    --theme-banner-from: #0b1528;
+    --theme-banner-via: #0e1e38;
+    --theme-banner-to: #050b14;
+    --theme-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  /* 3. Ayush Emerald (Public Health Green) */
+  [data-theme="emerald"] {
+    --theme-bg: #f2f9f5;
+    --theme-bg-subtle: #e6f4ec;
+    --theme-card: #ffffff;
+    --theme-card-subtle: #f4faf6;
+    --theme-border: #d1e7dd;
+    --theme-border-strong: #a7d3c0;
+    --theme-text-primary: #064e3b;
+    --theme-text-secondary: #065f46;
+    --theme-text-muted: #047857;
+    --theme-primary: #059669;
+    --theme-primary-hover: #047857;
+    --theme-primary-subtle: #ecfdf5;
+    --theme-primary-text: #065f46;
+    --theme-header-bg: rgba(255, 255, 255, 0.95);
+    --theme-banner-from: #064e3b;
+    --theme-banner-via: #065f46;
+    --theme-banner-to: #022c22;
+    --theme-shadow: 0 1px 3px 0 rgba(6, 78, 59, 0.06);
+  }
+
+  /* 4. Rural PHC Sunlight (Warm Stone & Terracotta) */
+  [data-theme="terracotta"] {
+    --theme-bg: #faf6f0;
+    --theme-bg-subtle: #f4ede2;
+    --theme-card: #ffffff;
+    --theme-card-subtle: #faf7f2;
+    --theme-border: #e8decb;
+    --theme-border-strong: #d9caa8;
+    --theme-text-primary: #451a03;
+    --theme-text-secondary: #78350f;
+    --theme-text-muted: #92400e;
+    --theme-primary: #ea580c;
+    --theme-primary-hover: #c2410c;
+    --theme-primary-subtle: #fff7ed;
+    --theme-primary-text: #9a3412;
+    --theme-header-bg: rgba(255, 255, 255, 0.95);
+    --theme-banner-from: #7c2d12;
+    --theme-banner-via: #451a03;
+    --theme-banner-to: #1c1917;
+    --theme-shadow: 0 1px 3px 0 rgba(69, 26, 3, 0.06);
+  }
+
+  /* 5. Surgical Amethyst (Biotech Luxury Dark) */
+  [data-theme="obsidian-rose"], .dark[data-theme="obsidian-rose"] {
+    --theme-bg: #0b0813;
+    --theme-bg-subtle: #140f21;
+    --theme-card: #171126;
+    --theme-card-subtle: #211936;
+    --theme-border: #2a2044;
+    --theme-border-strong: #3f3166;
+    --theme-text-primary: #f8fafc;
+    --theme-text-secondary: #e2e8f0;
+    --theme-text-muted: #cbd5e1;
+    --theme-primary: #a855f7;
+    --theme-primary-hover: #9333ea;
+    --theme-primary-subtle: #3b0764;
+    --theme-primary-text: #e9d5ff;
+    --theme-header-bg: rgba(14, 10, 24, 0.95);
+    --theme-banner-from: #2e1065;
+    --theme-banner-via: #1e1b4b;
+    --theme-banner-to: #090514;
+    --theme-shadow: 0 4px 20px -2px rgba(168, 85, 247, 0.15);
+  }
+
+  /* 6. High-Contrast Accessibility */
+  [data-theme="high-contrast"] {
+    --theme-bg: #ffffff;
+    --theme-bg-subtle: #f4f4f5;
+    --theme-card: #ffffff;
+    --theme-card-subtle: #f4f4f5;
+    --theme-border: #000000;
+    --theme-border-strong: #000000;
+    --theme-text-primary: #000000;
+    --theme-text-secondary: #18181b;
+    --theme-text-muted: #3f3f46;
+    --theme-primary: #000000;
+    --theme-primary-hover: #27272a;
+    --theme-primary-subtle: #e4e4e7;
+    --theme-primary-text: #000000;
+    --theme-header-bg: #ffffff;
+    --theme-banner-from: #000000;
+    --theme-banner-via: #18181b;
+    --theme-banner-to: #000000;
+    --theme-shadow: none;
+  }
+
+  /* Font size scales */
+  [data-font-size="large"] {
+    font-size: 112.5%;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--theme-bg);
+    color: var(--theme-text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom utility classes mapped to CSS variables for ultra-clean styling */
+.bg-theme-main {
+  background-color: var(--theme-bg);
+}
+.bg-theme-subtle {
+  background-color: var(--theme-bg-subtle);
+}
+.bg-theme-card {
+  background-color: var(--theme-card);
+}
+.bg-theme-card-subtle {
+  background-color: var(--theme-card-subtle);
+}
+.border-theme {
+  border-color: var(--theme-border);
+}
+.border-theme-strong {
+  border-color: var(--theme-border-strong);
+}
+.text-theme-primary {
+  color: var(--theme-text-primary);
+}
+.text-theme-secondary {
+  color: var(--theme-text-secondary);
+}
+.text-theme-muted {
+  color: var(--theme-text-muted);
+}
+.bg-theme-primary-btn {
+  background-color: var(--theme-primary);
+}
+.bg-theme-primary-btn:hover {
+  background-color: var(--theme-primary-hover);
+}
+.bg-theme-primary-subtle {
+  background-color: var(--theme-primary-subtle);
+}
+.text-theme-primary-accent {
+  color: var(--theme-primary);
+}
+.text-theme-primary-text {
+  color: var(--theme-primary-text);
+}
+.header-glass {
+  background-color: var(--theme-header-bg);
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Smooth range slider styling */
+input[type="range"]::-webkit-slider-thumb {
+  cursor: pointer;
+}
+
+/* Official Google Sign-In Button Styling (GSI Material Spec) */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747775;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 13px;
+  height: 42px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.15);
+}
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.gsi-material-button .gsi-material-button-contents {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+.gsi-material-button .gsi-material-button-state {
+  -webkit-transition: opacity .218s;
+  transition: opacity .218s;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff61;
+  border-color: #1f1f1f1f;
+}
+.gsi-material-button:disabled .gsi-material-button-contents {
+  opacity: 38%;
+}
+.gsi-material-button:disabled .gsi-material-button-icon {
+  opacity: 38%;
+}
+.gsi-material-button:not(:disabled):hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .30), 0 4px 8px 3px rgba(60, 64, 67, .15);
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .30), 0 4px 8px 3px rgba(60, 64, 67, .15);
+  border-color: #4285f4;
+}

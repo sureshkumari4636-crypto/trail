@@ -1,0 +1,8 @@
+{
+  "name": "Remix Explainable AI for Diabetic Retinopathy Screening in Rural India",
+  "description": "Smart India Hackathon (SIH) prototype for rural health workers featuring multi-theme clinical UI approaches, Google Drive cloud sync, fundus image screening, Grad-CAM explainability heatmaps, risk grading, and referral cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
